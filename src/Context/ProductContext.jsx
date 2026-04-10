@@ -17,7 +17,7 @@ export const ProductProvider = ({ children }) => {
             const data = await response.json();
             console.log(data.products)
 
-            setProducts(data);
+            setProducts(data.products);
             setLoading(false);
         } catch (error) {
             console.error("Error fetching products:", error);
