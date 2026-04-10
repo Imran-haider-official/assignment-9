@@ -2,8 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 import { ProductProvider } from "./Context/ProductContext.jsx";
 import ProductList from "./Pages/ProductListing.jsx";
-import ProductDetails from "./pages/ProductDetails";
-import AddEditProduct from "./pages/AddEditProduct";
+import ProductDetails from "./Pages/ProductDetails";
+import AddEditProduct from "./Pages/AddEditProduct";
 import Navbar from "./components/Navbar.jsx";
 
 
