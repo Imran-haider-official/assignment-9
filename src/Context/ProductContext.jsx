@@ -15,7 +15,7 @@ export const ProductProvider = ({ children }) => {
 
             const response = await fetch("https://dummyjson.com/products");
             const data = await response.json();
-            console.log(data)
+            console.log(data.products)
 
             setProducts(data);
             setLoading(false);
