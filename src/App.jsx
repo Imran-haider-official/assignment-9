@@ -4,7 +4,7 @@ import { ProductProvider } from "./Context/ProductContext.jsx";
 import ProductList from "./Pages/ProductListing.jsx";
 import ProductDetails from "./pages/ProductDetails";
 import AddEditProduct from "./pages/AddEditProduct";
-import Navbar from "./Components/Navbar.jsx";
+import Navbar from "./components/Navbar.jsx";
 
 
 function App() {
