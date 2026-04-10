@@ -13,7 +13,7 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = async () => {
         try {
 
-            const response = await fetch("http://localhost:3000/products/");
+            const response = await fetch("https://dummyjson.com/products");
             const data = await response.json();
             console.log(data)
 
@@ -37,7 +37,7 @@ export const ProductProvider = ({ children }) => {
     const deleteProduct = async (id) => {
         if (window.confirm("Are you sure you want to delete this product?")) {
 
-            await axios.delete(`http://localhost:3000/products/${id}`)
+            await axios.delete(`https://dummyjson.com/products/${id}`)
             fetchProducts();
 
 
