@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ProductContext } from '../Context/ProductContext.jsx';
-import ProductCard from '../Components/ProductCard.jsx';
+import ProductCard from '../components/ProductCard.jsx';
 import { PackageSearch, Loader2 } from 'lucide-react';
 
 const ProductList = () => {
