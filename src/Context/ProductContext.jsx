@@ -13,11 +13,11 @@ export const ProductProvider = ({ children }) => {
     const fetchProducts = async () => {
         try {
 
-            const response = await fetch("https://dummyjson.com/products");
+            const response = await axios.get("http://localhost:3000/products/")
             const data = await response.json();
-            console.log(data.products)
+            console.log(data)
 
-            setProducts(data.products);
+            setProducts(data); 
             setLoading(false);
         } catch (error) {
             console.error("Error fetching products:", error);
@@ -37,7 +37,7 @@ export const ProductProvider = ({ children }) => {
     const deleteProduct = async (id) => {
         if (window.confirm("Are you sure you want to delete this product?")) {
 
-            await axios.delete(`https://dummyjson.com/products/${id}`)
+            await axios.delete(`http://localhost:3000/products/${id}`)
             fetchProducts();
 
 
@@ -46,11 +46,7 @@ export const ProductProvider = ({ children }) => {
     };
 
     const addProduct = (newProduct) => {
-        setProducts(prev => {
-            const nextId = prev.length > 0 ? Math.max(...prev.map(p => p.id)) + 1 : 1;
-            const product = { ...newProduct, id: nextId };
-            return [product, ...prev];
-        });
+        axios.post("")
     };
 
     const updateProduct = (id, updatedData) => {
